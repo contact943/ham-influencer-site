@@ -35,6 +35,8 @@ body {
   font-size: var(--text-h1);
   line-height: 1.05;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
   margin-bottom: var(--space-md);
 }
 
@@ -431,6 +433,8 @@ body {
   font-size: var(--text-hero);
   line-height: 0.95;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
   margin-bottom: var(--space-md);
 }
 
@@ -948,6 +952,8 @@ body {
   font-size: var(--text-h1);
   line-height: 1.05;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
   margin-bottom: var(--space-md);
 }
 
@@ -1264,11 +1270,27 @@ body {
     width: 40px;
   }
 
-  /* Let titles flow naturally on mobile instead of forced line breaks */
+  /* Titles flow naturally on mobile. Turn br into a space so words don't merge. */
   .section-title br,
   .hero__title br,
   .cta__title br {
-    display: none;
+    display: inline;
+    content: ' ';
+    white-space: pre;
+  }
+  .section-title br::before,
+  .hero__title br::before,
+  .cta__title br::before {
+    content: ' ';
+    white-space: pre;
+  }
+
+  /* Slightly looser letter spacing on mobile for Anton/Bebas headers */
+  .section-title,
+  .hero__title,
+  .cta__title {
+    letter-spacing: 0.01em;
+    word-spacing: 0.05em;
   }
 }
 
