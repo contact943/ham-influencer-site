@@ -1336,10 +1336,26 @@ body {
 
   .network__grid {
     flex-wrap: wrap;
+    gap: 12px;
   }
 
   .network__card {
-    flex: 1 1 calc(50% - 16px);
+    flex: 1 1 calc(50% - 6px);
+    min-width: 0;
+    padding: 16px 12px;
+    overflow: hidden;
+  }
+
+  .network__card-title {
+    font-size: 1.125rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .network__card-body {
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .network__platforms-list {
