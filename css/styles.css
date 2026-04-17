@@ -1113,20 +1113,18 @@ body {
     word-break: break-word;
   }
 
-  /* Mobile: replace absolute collage with a clean row of photos */
+  /* Mobile: circle grid behind the hero text */
   .hero__collage {
-    position: relative;
-    inset: auto;
+    position: absolute;
     display: flex;
     justify-content: center;
     gap: 8px;
-    padding: 0 16px;
-    margin-bottom: 32px;
-    order: -1;
     flex-wrap: wrap;
     max-width: 360px;
-    margin-left: auto;
-    margin-right: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    padding: 0 16px;
   }
 
   .hero__cutout {
@@ -1137,24 +1135,17 @@ body {
     height: 70px !important;
     border-radius: 50% !important;
     object-fit: cover;
-    filter: grayscale(20%) brightness(0.85) !important;
+    filter: grayscale(30%) brightness(0.5) !important;
     z-index: 1 !important;
     flex-shrink: 0;
-  }
-
-  /* Override the hero flex direction so photos sit above text */
-  .hero {
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 100px;
   }
 
   .hero__overlay {
     background: linear-gradient(
       to top,
-      rgba(0,0,0,0.9) 0%,
-      rgba(0,0,0,0.6) 40%,
-      rgba(0,0,0,0.4) 100%
+      rgba(0,0,0,0.85) 0%,
+      rgba(0,0,0,0.5) 40%,
+      rgba(0,0,0,0.3) 100%
     );
   }
 
