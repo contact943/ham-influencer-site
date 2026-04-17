@@ -184,7 +184,7 @@ body {
 }
 
 .nav__logo-img {
-  height: 36px;
+  height: 90px;
   width: auto;
 }
 
@@ -606,7 +606,7 @@ body {
 
 .network__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-md);
   margin-bottom: var(--space-xl);
 }
@@ -958,8 +958,8 @@ body {
 }
 
 .footer__logo {
-  height: 32px;
-  margin: 0 auto var(--space-xs);
+  height: 70px;
+  margin: 0 auto var(--space-sm);
 }
 
 .footer__tagline {
@@ -1020,6 +1020,16 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* Prevent ANY horizontal overflow on mobile */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Scale nav logo for mobile */
+  .nav__logo-img {
+    height: 60px;
+  }
+
   .nav__links {
     display: none;
     position: fixed;
@@ -1063,6 +1073,16 @@ body {
     padding-bottom: 60px;
   }
 
+  /* Ensure hero text never clips edges */
+  .hero__content {
+    padding: 0 24px;
+  }
+
+  .hero__title {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    word-break: break-word;
+  }
+
   .hero__cutout--back-left,
   .hero__cutout--back-right,
   .hero__cutout--back-center-left,
@@ -1074,9 +1094,20 @@ body {
   .hero__cutout--left-1, .hero__cutout--right-1 { width: 110px; height: 150px; left: 10%; right: 10%; }
   .hero__cutout--left-2, .hero__cutout--right-2 { display: none; }
 
+  /* Ensure all containers have safe mobile padding */
+  .container {
+    padding: 0 20px;
+  }
+
   .about .container {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
+  }
+
+  /* Section titles safe for mobile */
+  .section-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    word-break: break-word;
   }
 
   .services__grid {
@@ -1096,6 +1127,10 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .work__header .section-title {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
   .proof__inner {
     flex-wrap: wrap;
     gap: 24px;
@@ -1111,5 +1146,55 @@ body {
 
   .network__platforms-list {
     flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .network__platform {
+    font-size: var(--text-h4);
+  }
+
+  /* CTA buttons stack on mobile */
+  .cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta__title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  /* Footer links wrap on mobile */
+  .footer__links {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .footer__logo {
+    height: 50px;
+  }
+
+  /* Marquee edge fades narrower on mobile */
+  .work__marquee::before,
+  .work__marquee::after {
+    width: 40px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 380px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .nav__logo-img {
+    height: 48px;
+  }
+
+  .proof__number {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding: 0 16px;
   }
 }
