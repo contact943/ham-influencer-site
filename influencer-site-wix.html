@@ -1247,15 +1247,16 @@ body {
     word-break: break-word;
   }
 
-  /* Mobile: 3x3-ish circle grid behind the hero text */
+  /* Mobile: 3x3 circle grid behind the hero text */
   .hero__collage {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(4, 70px);
-    gap: 10px;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 12px;
     justify-content: center;
     left: 50%;
-    top: 45%;
+    top: 42%;
     transform: translate(-50%, -50%);
     padding: 0;
   }
@@ -1264,13 +1265,17 @@ body {
     position: relative !important;
     inset: auto !important;
     transform: none !important;
-    width: 70px !important;
-    height: 70px !important;
+    width: 80px !important;
+    height: 80px !important;
     border-radius: 50% !important;
     object-fit: cover;
     filter: grayscale(30%) brightness(0.5) !important;
     z-index: 1 !important;
-    flex-shrink: 0;
+  }
+
+  /* Hide all cutouts after the 9th one */
+  .hero__cutout:nth-child(n+10) {
+    display: none !important;
   }
 
   .hero__overlay {
@@ -1914,15 +1919,13 @@ document.addEventListener('DOMContentLoaded', function() {
   // Fade-up animations (IntersectionObserver for Wix iframe compatibility)
   var fadeEls = document.querySelectorAll('[data-animate="fade-up"]');
   fadeEls.forEach(function(el) {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(40px)';
+    el.style.opacity = '0'; el.style.transform = 'translateY(40px)';
     el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
   });
   var fadeObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
-        var el = entry.target;
-        var delay = parseFloat(el.dataset.animateDelay) || 0;
+        var el = entry.target; var delay = parseFloat(el.dataset.animateDelay) || 0;
         setTimeout(function() { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, delay * 1000);
         fadeObserver.unobserve(el);
       }
