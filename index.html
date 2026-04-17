@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High Arc Media | Influencer Marketing</title>
+  <meta name="description" content="We connect brands with creators who move culture. 24 creators, 14M+ combined reach, real results.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Background Orbs -->
+  <div class="page-bg" aria-hidden="true">
+    <div class="page-bg__orb page-bg__orb--1"></div>
+    <div class="page-bg__orb page-bg__orb--2"></div>
+    <div class="page-bg__orb page-bg__orb--3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="assets/images/ham-logo.png" alt="High Arc Media" class="nav__logo-img">
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#how-it-works" class="nav__link">Process</a>
+        <a href="#work" class="nav__link">Work</a>
+        <a href="#contact" class="nav__link btn btn--primary">Book a Call</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero__collage" id="heroCollage" aria-hidden="true">
+      <!-- Influencer cutouts positioned via CSS -->
+      <img src="assets/images/influencers/theowisseh.png" alt="" class="hero__cutout hero__cutout--center" loading="eager">
+      <img src="assets/images/influencers/naturallymelonie.png" alt="" class="hero__cutout hero__cutout--left-1" loading="eager">
+      <img src="assets/images/influencers/teesanderscomedy.png" alt="" class="hero__cutout hero__cutout--right-1" loading="eager">
+      <img src="assets/images/influencers/ayethatsmera.png" alt="" class="hero__cutout hero__cutout--left-2" loading="eager">
+      <img src="assets/images/influencers/myronjewels.png" alt="" class="hero__cutout hero__cutout--right-2" loading="eager">
+      <img src="assets/images/influencers/80ktwins.png" alt="" class="hero__cutout hero__cutout--back-left" loading="eager">
+      <img src="assets/images/influencers/kalemyname.png" alt="" class="hero__cutout hero__cutout--back-right" loading="eager">
+      <img src="assets/images/influencers/ichvse.png" alt="" class="hero__cutout hero__cutout--far-left" loading="eager">
+      <img src="assets/images/influencers/darryl.png" alt="" class="hero__cutout hero__cutout--far-right" loading="eager">
+      <img src="assets/images/influencers/lightskinkim.png" alt="" class="hero__cutout hero__cutout--back-center-left" loading="eager">
+      <img src="assets/images/influencers/geminikhai.png" alt="" class="hero__cutout hero__cutout--back-center-right" loading="eager">
+      <img src="assets/images/influencers/tylarmckenzie.png" alt="" class="hero__cutout hero__cutout--edge-left" loading="eager">
+      <img src="assets/images/influencers/nadia_adelay.png" alt="" class="hero__cutout hero__cutout--edge-right" loading="eager">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="section-label">High Arc Media</p>
+      <h1 class="hero__title">WE CONNECT BRANDS<br>WITH CREATORS WHO<br>MOVE CULTURE</h1>
+      <p class="hero__sub">Your brand deserves more than a post. It deserves a moment.</p>
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary btn--lg">Partner With Us</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-text">Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Social Proof Bar -->
+  <section class="proof" id="proof">
+    <div class="proof__inner">
+      <div class="proof__stat" data-animate="fade-up">
+        <span class="proof__number" data-count="14" data-suffix="M+">0</span>
+        <span class="proof__label">Combined Reach</span>
+      </div>
+      <div class="proof__divider"></div>
+      <div class="proof__stat" data-animate="fade-up" data-animate-delay="0.1">
+        <span class="proof__number" data-count="6" data-suffix="">0</span>
+        <span class="proof__label">Content Niches</span>
+      </div>
+      <div class="proof__divider"></div>
+      <div class="proof__stat" data-animate="fade-up" data-animate-delay="0.2">
+        <span class="proof__number" data-count="4" data-suffix="">0</span>
+        <span class="proof__label">Platforms Covered</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__text" data-animate="fade-up">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">THE BRIDGE BETWEEN<br>BRANDS AND CULTURE</h2>
+        <p class="about__body">
+          High Arc Media's influencer marketing division is built on personal relationships. Not databases. Not cold DMs. We know these creators. We have worked with them, talked with them, and built real trust over time.
+        </p>
+        <p class="about__body">
+          And every creator we work with is connected to dozens more. That means if a brand needs a specific type of talent, we can reach them. Comedy, fashion, food, lifestyle, entertainment, whatever the niche, we either have the relationship or we are one call away from it.
+        </p>
+        <p class="about__body">
+          No middlemen. No bloated contracts. Just results.
+        </p>
+      </div>
+      <div class="about__visual" data-animate="fade-up" data-animate-delay="0.2">
+        <div class="about__glow-box">
+          <div class="about__stat-grid">
+            <p class="about__mini-headline">Built on relationships.</p>
+            <p class="about__mini-desc">Every creator in our network is someone we know personally. And their connections extend our reach across every major platform and niche.</p>
+            <div class="about__niche-tags">
+              <span class="tag">Comedy</span>
+              <span class="tag">Fashion</span>
+              <span class="tag">Food</span>
+              <span class="tag">Lifestyle</span>
+              <span class="tag">Entertainment</span>
+              <span class="tag">Beauty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Network -->
+  <section class="network section" id="network">
+    <div class="container">
+      <div class="network__header" data-animate="fade-up">
+        <p class="section-label">Our Network</p>
+        <h2 class="section-title">CREATORS ACROSS<br>EVERY NICHE THAT MATTERS</h2>
+        <p class="network__sub">We have deep relationships with creators who have built real audiences and real trust. And their networks extend our reach even further.</p>
+      </div>
+      <div class="network__grid">
+        <div class="network__card" data-animate="fade-up" data-animate-delay="0">
+          <div class="network__card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 class="network__card-title">Comedy</h3>
+          <p class="network__card-body">Skits, pranks, stand-up, game shows, character comedy. Creators with viral moments and audiences that share everything.</p>
+          <span class="network__card-stat">Deep network</span>
+        </div>
+        <div class="network__card" data-animate="fade-up" data-animate-delay="0.1">
+          <div class="network__card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 class="network__card-title">Entertainment</h3>
+          <p class="network__card-body">Actors, TV personalities, reality stars, dancers. Creators with screen credits on Netflix, Starz, Peacock, and BET.</p>
+          <span class="network__card-stat">Deep network</span>
+        </div>
+        <div class="network__card" data-animate="fade-up" data-animate-delay="0.2">
+          <div class="network__card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+          <h3 class="network__card-title">Fashion</h3>
+          <p class="network__card-body">Models, stylists, Fashion Nova ambassadors. Creators who set trends and drive purchases through hauls, lookbooks, and brand partnerships.</p>
+          <span class="network__card-stat">Deep network</span>
+        </div>
+        <div class="network__card" data-animate="fade-up" data-animate-delay="0.3">
+          <div class="network__card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3 class="network__card-title">Food + Lifestyle</h3>
+          <p class="network__card-body">Vegan entrepreneurs, motherhood creators, travel influencers, wellness advocates. Audiences that trust their recommendations and buy what they use.</p>
+          <span class="network__card-stat">Deep network</span>
+        </div>
+      </div>
+      <div class="network__platforms" data-animate="fade-up">
+        <p class="network__platforms-label">Platforms we cover</p>
+        <div class="network__platforms-list">
+          <span class="network__platform">Instagram</span>
+          <span class="network__platform">TikTok</span>
+          <span class="network__platform">YouTube</span>
+          <span class="network__platform">Facebook</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="services__header" data-animate="fade-up">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">EVERYTHING FROM<br>MATCH TO METRICS</h2>
+      </div>
+      <div class="services__grid">
+        <div class="services__card" data-animate="fade-up" data-animate-delay="0">
+          <div class="services__number">01</div>
+          <h3 class="services__card-title">Creator Matching</h3>
+          <p class="services__card-body">We know every creator in our network personally. Their audience, their style, what brands they work well with. We match based on fit, not just follower count.</p>
+        </div>
+        <div class="services__card" data-animate="fade-up" data-animate-delay="0.1">
+          <div class="services__number">02</div>
+          <h3 class="services__card-title">Campaign Management</h3>
+          <p class="services__card-body">From the first email to the final deliverable. We handle outreach, negotiations, timelines, and approvals so your team can focus on the bigger picture.</p>
+        </div>
+        <div class="services__card" data-animate="fade-up" data-animate-delay="0.2">
+          <div class="services__number">03</div>
+          <h3 class="services__card-title">Content Production</h3>
+          <p class="services__card-body">Reels, TikToks, Stories, UGC. Our creators make content that performs because they know their audience better than any brief could.</p>
+        </div>
+        <div class="services__card" data-animate="fade-up" data-animate-delay="0.3">
+          <div class="services__number">04</div>
+          <h3 class="services__card-title">Analytics + Reporting</h3>
+          <p class="services__card-body">Real numbers after every campaign. Views, engagement, click-throughs, conversions. You see exactly what your investment did.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works section" id="how-it-works">
+    <div class="container">
+      <div class="how-it-works__header" data-animate="fade-up">
+        <p class="section-label">The Process</p>
+        <h2 class="section-title">THREE STEPS.<br>ZERO HEADACHES.</h2>
+      </div>
+      <div class="how-it-works__timeline" id="timeline">
+        <svg class="how-it-works__line-svg" viewBox="0 0 1000 4" preserveAspectRatio="none" aria-hidden="true">
+          <line class="how-it-works__line-bg" x1="80" y1="2" x2="920" y2="2"/>
+          <line class="how-it-works__line-path" id="timelineLine" x1="80" y1="2" x2="920" y2="2"/>
+        </svg>
+        <div class="how-it-works__steps">
+          <div class="how-it-works__step" data-animate="fade-up" data-animate-delay="0">
+            <div class="how-it-works__step-number"><span>1</span></div>
+            <h3 class="how-it-works__step-title">Tell Us Your Goals</h3>
+            <p class="how-it-works__step-body">What is your brand? Who do you want to reach? What does success look like? We start every partnership with a conversation, not a contract.</p>
+          </div>
+          <div class="how-it-works__step" data-animate="fade-up" data-animate-delay="0.15">
+            <div class="how-it-works__step-number"><span>2</span></div>
+            <h3 class="how-it-works__step-title">We Match You</h3>
+            <p class="how-it-works__step-body">We pull from our network to find creators whose audience, style, and energy match your brand. You approve the talent before anything goes live.</p>
+          </div>
+          <div class="how-it-works__step" data-animate="fade-up" data-animate-delay="0.3">
+            <div class="how-it-works__step-number"><span>3</span></div>
+            <h3 class="how-it-works__step-title">Watch It Perform</h3>
+            <p class="how-it-works__step-body">Content goes live, numbers come in, and you get a full report. If it works (it will), we run it back.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work / Social Proof -->
+  <section class="work section" id="work">
+    <div class="container">
+      <div class="work__header" data-animate="fade-up">
+        <p class="section-label">The Work</p>
+        <h2 class="section-title">BRANDS OUR<br>CREATORS HAVE<br>WORKED WITH</h2>
+        <p class="work__sub">Our network includes creators with campaign credits from these brands and more.</p>
+      </div>
+      <div class="work__marquee" aria-label="Brand logos">
+        <div class="work__marquee-track">
+          <span class="work__logo">SAVAGE X FENTY</span>
+          <span class="work__logo">META</span>
+          <span class="work__logo">AMAZON PRIME VIDEO</span>
+          <span class="work__logo">MONSTER ENERGY</span>
+          <span class="work__logo">FASHION NOVA</span>
+          <span class="work__logo">JETBLUE</span>
+          <span class="work__logo">WALMART</span>
+          <span class="work__logo">BURGER KING</span>
+          <span class="work__logo">CARNIVAL</span>
+          <span class="work__logo">MICHELOB ULTRA</span>
+          <span class="work__logo">PETA</span>
+          <span class="work__logo">MTV</span>
+          <span class="work__logo">iHEARTRADIO</span>
+          <span class="work__logo">NETFLIX</span>
+          <span class="work__logo">STARZ</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="work__logo">SAVAGE X FENTY</span>
+          <span class="work__logo">META</span>
+          <span class="work__logo">AMAZON PRIME VIDEO</span>
+          <span class="work__logo">MONSTER ENERGY</span>
+          <span class="work__logo">FASHION NOVA</span>
+          <span class="work__logo">JETBLUE</span>
+          <span class="work__logo">WALMART</span>
+          <span class="work__logo">BURGER KING</span>
+          <span class="work__logo">CARNIVAL</span>
+          <span class="work__logo">MICHELOB ULTRA</span>
+          <span class="work__logo">PETA</span>
+          <span class="work__logo">MTV</span>
+          <span class="work__logo">iHEARTRADIO</span>
+          <span class="work__logo">NETFLIX</span>
+          <span class="work__logo">STARZ</span>
+        </div>
+      </div>
+      <div class="work__highlights">
+        <div class="work__highlight" data-animate="fade-up" data-animate-delay="0">
+          <div class="work__highlight-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h4 class="work__highlight-title">NAACP Image Award Winner</h4>
+          <p class="work__highlight-body">Tee Sanders won Outstanding Digital Content Creator at the 57th NAACP Image Awards. That is the caliber of talent in our network.</p>
+        </div>
+        <div class="work__highlight" data-animate="fade-up" data-animate-delay="0.1">
+          <div class="work__highlight-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h4 class="work__highlight-title">Savage x Fenty Ambassador</h4>
+          <p class="work__highlight-body">First Little Person ambassador for Rihanna's brand. National campaigns, major press, and a cultural moment that went beyond social media.</p>
+        </div>
+        <div class="work__highlight" data-animate="fade-up" data-animate-delay="0.2">
+          <div class="work__highlight-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4 class="work__highlight-title">6M+ TikTok Following</h4>
+          <p class="work__highlight-body">Multiple creators in our network have crossed the million-follower mark on TikTok. One sits at 6M with brand partnerships from Meta and Amazon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta section" id="contact">
+    <div class="container" data-animate="fade-up">
+      <div class="cta__inner">
+        <p class="section-label">Get Started</p>
+        <h2 class="cta__title">YOUR NEXT CAMPAIGN<br>STARTS WITH A CALL</h2>
+        <p class="cta__body">Tell us about your brand, your goals, and who you want to reach. We will find the right creators and build something that actually performs.</p>
+        <div class="cta__buttons">
+          <a href="https://calendly.com/higharc" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Book a Free Call</a>
+          <a href="mailto:contact@higharcmedia.com" class="btn btn--outline btn--lg">Send Us a Brief</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/images/ham-logo.png" alt="High Arc Media" class="footer__logo">
+        <p class="footer__tagline">Influencer marketing that moves culture.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#how-it-works">Process</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer__contact">
+        <a href="mailto:contact@higharcmedia.com">contact@higharcmedia.com</a>
+      </div>
+      <div class="footer__bottom">
+        <p>(c) 2026 High Arc Media. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
