@@ -1,4 +1,82 @@
 /* ========================================
+   BACKGROUND STARS / PARTICLES (full page)
+   ======================================== */
+(function() {
+  var canvas = document.getElementById('bgStars');
+  if (!canvas) return;
+
+  var ctx = canvas.getContext('2d');
+  var stars = [];
+  var STAR_COUNT = 120;
+  var w, h;
+
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  }
+
+  function init() {
+    resize();
+    stars = [];
+    for (var i = 0; i < STAR_COUNT; i++) {
+      stars.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 1.5 + 0.3,
+        dx: (Math.random() - 0.5) * 0.15,
+        dy: (Math.random() - 0.5) * 0.1,
+        opacity: Math.random() * 0.4 + 0.1,
+        pulse: Math.random() * Math.PI * 2,
+        pulseSpeed: Math.random() * 0.008 + 0.003
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+
+    for (var i = 0; i < stars.length; i++) {
+      var s = stars[i];
+
+      // Move
+      s.x += s.dx;
+      s.y += s.dy;
+      s.pulse += s.pulseSpeed;
+
+      // Wrap around
+      if (s.x < 0) s.x = w;
+      if (s.x > w) s.x = 0;
+      if (s.y < 0) s.y = h;
+      if (s.y > h) s.y = 0;
+
+      // Pulse opacity
+      var alpha = s.opacity + Math.sin(s.pulse) * 0.15;
+      if (alpha < 0.05) alpha = 0.05;
+
+      // Draw star with cyan tint
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(62, 212, 207, ' + alpha + ')';
+      ctx.fill();
+
+      // Glow for larger stars
+      if (s.r > 1) {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r * 3, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(62, 212, 207, ' + (alpha * 0.15) + ')';
+        ctx.fill();
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  init();
+  draw();
+  window.addEventListener('resize', resize);
+})();
+
+/* ========================================
    PERF GUARD
    ======================================== */
 (function() {
