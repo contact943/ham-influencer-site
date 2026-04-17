@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High Arc Media | Influencer Marketing</title>
+  <meta name="description" content="We connect brands with creators who move culture. 40M+ cross-platform reach, real relationships, real results.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+:root {
+  /* Brand Colors */
+  --ham-dark-azure: #025E76;
+  --ham-cyan: #3ED4CF;
+  --ham-cyan-hover: #5EEAE5;
+  --ham-black: #000000;
+  --ham-white: #ffffff;
+  --ham-gray: #868686;
+  --ham-light-grey: #d9d9d9;
+
+  /* Semantic Colors */
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-accent: #3ED4CF;
+  --color-accent-hover: #5EEAE5;
+  --color-primary: #025E76;
+  --color-muted: #868686;
+  --color-card-bg: rgba(255,255,255,0.03);
+  --color-card-border: rgba(62,212,207,0.15);
+  --color-tag-bg: rgba(62,212,207,0.12);
+
+  /* Typography */
+  --font-display: 'Anton', sans-serif;
+  --font-heading: 'Bebas Neue', cursive;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Type Scale */
+  --text-hero: clamp(3.5rem, 8vw, 7rem);
+  --text-h1: clamp(2.5rem, 5vw, 4.5rem);
+  --text-h2: clamp(2rem, 4vw, 3.5rem);
+  --text-h3: clamp(1.5rem, 3vw, 2.25rem);
+  --text-h4: clamp(1.125rem, 2vw, 1.5rem);
+  --text-body: clamp(0.9375rem, 1.2vw, 1.125rem);
+  --text-small: clamp(0.8125rem, 1vw, 0.9375rem);
+  --text-label: clamp(0.75rem, 0.9vw, 0.875rem);
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 80px;
+  --space-2xl: 120px;
+  --section-padding: clamp(60px, 8vw, 120px);
+  --container-padding: clamp(24px, 5vw, 80px);
+  --content-max: 1200px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 0.2s;
+  --duration-base: 0.4s;
+  --duration-slow: 0.8s;
+
+  /* Z-Index */
+  --z-bg: 0;
+  --z-orbs: 1;
+  --z-canvas: 2;
+  --z-collage: 3;
+  --z-overlay: 4;
+  --z-content: 5;
+  --z-nav: 100;
+  --z-modal: 200;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 700px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ========================================
+   GLOBAL
+   ======================================== */
+body {
+  position: relative;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.section {
+  padding: var(--section-padding) 0;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.section-label {
+  font-family: var(--font-heading);
+  font-size: var(--text-label);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--space-sm);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast) var(--ease-out);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: var(--ham-black);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-hover);
+  box-shadow: 0 0 30px rgba(62,212,207,0.3);
+  transform: translateY(-2px);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+}
+
+.btn--outline:hover {
+  background: rgba(62,212,207,0.1);
+  box-shadow: 0 0 20px rgba(62,212,207,0.15);
+  transform: translateY(-2px);
+}
+
+.btn--lg {
+  padding: 16px 36px;
+  font-size: var(--text-body);
+}
+
+/* ========================================
+   BACKGROUND ORBS
+   ======================================== */
+/* Full-page animated stars canvas */
+.bg-stars {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-orbs);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.page-bg__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform;
+}
+
+.page-bg__orb--1 {
+  top: -15%;
+  right: -5%;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle,
+    rgba(62,212,207,0.06) 0%,
+    rgba(2,94,118,0.03) 40%,
+    transparent 70%
+  );
+  animation: orbDrift1 25s ease-in-out infinite;
+}
+
+.page-bg__orb--2 {
+  bottom: -10%;
+  left: -8%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle,
+    rgba(2,94,118,0.08) 0%,
+    transparent 65%
+  );
+  filter: blur(100px);
+  animation: orbDrift2 30s ease-in-out infinite;
+}
+
+.page-bg__orb--3 {
+  top: 45%;
+  left: 40%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle,
+    rgba(62,212,207,0.03) 0%,
+    transparent 60%
+  );
+  filter: blur(60px);
+  animation: orbDrift3 20s ease-in-out infinite;
+}
+
+@keyframes orbDrift1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-40px, 50px); }
+}
+
+@keyframes orbDrift2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -40px); }
+}
+
+@keyframes orbDrift3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, -50px); }
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+.nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  padding: 20px 0;
+  transition: background var(--duration-base) ease, padding var(--duration-base) ease;
+}
+
+.nav--scrolled {
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 0;
+}
+
+.nav__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo-img {
+  height: 90px;
+  width: auto;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav__link {
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color var(--duration-fast) ease;
+  position: relative;
+}
+
+.nav__link:not(.btn):hover {
+  color: var(--color-accent);
+}
+
+.nav__link:not(.btn)::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--color-accent);
+  transition: width 0.3s var(--ease-out);
+}
+
+.nav__link:not(.btn):hover::after {
+  width: 100%;
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  transition: all 0.3s ease;
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+.hero {
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-canvas);
+}
+
+.hero__collage {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-collage);
+  overflow: hidden;
+}
+
+.hero__cutout {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 4px;
+  filter: grayscale(30%) brightness(0.85);
+  transition: filter 0.4s ease;
+}
+
+.hero__cutout:hover {
+  filter: grayscale(0%) brightness(1);
+}
+
+/* Center figure - largest, front */
+.hero__cutout--center {
+  width: 220px;
+  height: 280px;
+  left: 50%;
+  bottom: 15%;
+  transform: translateX(-50%);
+  z-index: 10;
+  filter: grayscale(10%) brightness(0.9);
+}
+
+/* Left-1 and Right-1 - flanking */
+.hero__cutout--left-1 {
+  width: 180px;
+  height: 240px;
+  left: 28%;
+  bottom: 18%;
+  z-index: 8;
+}
+
+.hero__cutout--right-1 {
+  width: 180px;
+  height: 240px;
+  right: 28%;
+  bottom: 18%;
+  z-index: 8;
+}
+
+/* Left-2 and Right-2 - wider */
+.hero__cutout--left-2 {
+  width: 160px;
+  height: 220px;
+  left: 15%;
+  bottom: 20%;
+  z-index: 6;
+}
+
+.hero__cutout--right-2 {
+  width: 160px;
+  height: 220px;
+  right: 15%;
+  bottom: 20%;
+  z-index: 6;
+}
+
+/* Back row - smaller, higher */
+.hero__cutout--back-left {
+  width: 130px;
+  height: 180px;
+  left: 22%;
+  bottom: 40%;
+  z-index: 4;
+  filter: grayscale(40%) brightness(0.7);
+}
+
+.hero__cutout--back-right {
+  width: 130px;
+  height: 180px;
+  right: 22%;
+  bottom: 40%;
+  z-index: 4;
+  filter: grayscale(40%) brightness(0.7);
+}
+
+.hero__cutout--back-center-left {
+  width: 120px;
+  height: 170px;
+  left: 36%;
+  bottom: 42%;
+  z-index: 3;
+  filter: grayscale(50%) brightness(0.65);
+}
+
+.hero__cutout--back-center-right {
+  width: 120px;
+  height: 170px;
+  right: 36%;
+  bottom: 42%;
+  z-index: 3;
+  filter: grayscale(50%) brightness(0.65);
+}
+
+/* Far edges */
+.hero__cutout--far-left {
+  width: 140px;
+  height: 190px;
+  left: 4%;
+  bottom: 25%;
+  z-index: 5;
+  filter: grayscale(50%) brightness(0.6);
+}
+
+.hero__cutout--far-right {
+  width: 140px;
+  height: 190px;
+  right: 4%;
+  bottom: 25%;
+  z-index: 5;
+  filter: grayscale(50%) brightness(0.6);
+}
+
+/* Edge figures - outermost */
+.hero__cutout--edge-left {
+  width: 110px;
+  height: 160px;
+  left: 8%;
+  bottom: 45%;
+  z-index: 2;
+  filter: grayscale(60%) brightness(0.55);
+}
+
+.hero__cutout--edge-right {
+  width: 110px;
+  height: 160px;
+  right: 8%;
+  bottom: 45%;
+  z-index: 2;
+  filter: grayscale(60%) brightness(0.55);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.95) 0%,
+    rgba(0,0,0,0.7) 30%,
+    rgba(0,0,0,0.3) 60%,
+    rgba(0,0,0,0.1) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: var(--z-content);
+  text-align: center;
+  padding: 0 var(--container-padding);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.hero__sub {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: var(--color-muted);
+  font-weight: 300;
+  margin-bottom: var(--space-lg);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__cta {
+  margin-bottom: var(--space-lg);
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero__scroll-text {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-muted);
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--color-accent), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+/* ========================================
+   SOCIAL PROOF BAR
+   ======================================== */
+.proof {
+  position: relative;
+  z-index: var(--z-content);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: var(--space-lg) 0;
+}
+
+.proof__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 5vw, 64px);
+}
+
+.proof__stat {
+  text-align: center;
+}
+
+.proof__number {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: var(--color-accent);
+  display: block;
+  line-height: 1;
+}
+
+.proof__label {
+  font-size: var(--text-small);
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+  display: block;
+}
+
+.proof__divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+}
+
+/* ========================================
+   ABOUT
+   ======================================== */
+.about .container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about__body {
+  color: var(--ham-light-grey);
+  margin-bottom: var(--space-sm);
+  line-height: 1.7;
+}
+
+.about__body:last-child {
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.about__glow-box {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  position: relative;
+}
+
+.about__glow-box::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(62,212,207,0.1), transparent 50%);
+  z-index: -1;
+}
+
+.about__stat-grid {
+  text-align: center;
+}
+
+.about__mini-headline {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+}
+
+.about__mini-desc {
+  color: var(--color-muted);
+  font-size: var(--text-small);
+  margin-bottom: var(--space-md);
+}
+
+.about__niche-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tag {
+  background: var(--color-tag-bg);
+  color: var(--color-accent);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: var(--text-label);
+  font-weight: 500;
+}
+
+/* ========================================
+   NETWORK
+   ======================================== */
+.network__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-xl);
+}
+
+.network__sub {
+  color: var(--color-muted);
+  font-size: var(--text-body);
+}
+
+.network__grid {
+  display: flex;
+  gap: 16px;
+  margin-bottom: var(--space-xl);
+}
+
+.network__card {
+  flex: 1 1 0;
+  min-width: 0;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.network__card:hover {
+  border-color: rgba(62,212,207,0.35);
+  box-shadow: 0 0 30px rgba(62,212,207,0.08);
+  transform: translateY(-4px);
+}
+
+.network__card-icon {
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.network__card-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+}
+
+.network__card-body {
+  color: var(--color-muted);
+  font-size: var(--text-label);
+  line-height: 1.5;
+  margin-bottom: var(--space-xs);
+}
+
+.network__card-stat {
+  color: var(--color-accent);
+  font-size: var(--text-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.network__platforms {
+  text-align: center;
+}
+
+.network__platforms-label {
+  font-size: var(--text-small);
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-sm);
+}
+
+.network__platforms-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.network__platform {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  color: rgba(255,255,255,0.15);
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   SERVICES
+   ======================================== */
+.services__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.services__card {
+  background: var(--color-card-bg);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-md);
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.services__card:hover {
+  border-color: var(--color-card-border);
+  box-shadow: 0 0 40px rgba(62,212,207,0.06);
+}
+
+.services__number {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: rgba(62,212,207,0.15);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.services__card-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+}
+
+.services__card-body {
+  color: var(--color-muted);
+  font-size: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ========================================
+   HOW IT WORKS
+   ======================================== */
+.how-it-works__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.how-it-works__timeline {
+  position: relative;
+  padding: var(--space-lg) 0;
+}
+
+.how-it-works__line-svg {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.how-it-works__line-bg {
+  stroke: rgba(255,255,255,0.06);
+  stroke-width: 2;
+}
+
+.how-it-works__line-path {
+  stroke: var(--color-accent);
+  stroke-width: 2;
+  stroke-dasharray: 840;
+  stroke-dashoffset: 840;
+}
+
+.how-it-works__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  position: relative;
+}
+
+.how-it-works__step {
+  text-align: center;
+}
+
+.how-it-works__step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 2px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  position: relative;
+  z-index: 2;
+}
+
+.how-it-works__step-number span {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-accent);
+}
+
+.how-it-works__step-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+}
+
+.how-it-works__step-body {
+  color: var(--color-muted);
+  font-size: var(--text-small);
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   WORK / BRAND PROOF
+   ======================================== */
+.work__header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.work__sub {
+  color: var(--color-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.work__marquee {
+  overflow: hidden;
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg) 0;
+  position: relative;
+}
+
+.work__marquee::before,
+.work__marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.work__marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg), transparent);
+}
+
+.work__marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg), transparent);
+}
+
+.work__marquee-track {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  white-space: nowrap;
+  animation: marqueeScroll 40s linear infinite;
+  width: max-content;
+}
+
+.work__logo-img {
+  height: 40px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
+}
+
+.work__logo-img:hover {
+  opacity: 0.7;
+}
+
+.work__logo-text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+  line-height: 40px;
+}
+
+.work__logo-text:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.work__highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.work__highlight {
+  background: var(--color-card-bg);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+}
+
+.work__highlight-icon {
+  margin-bottom: var(--space-sm);
+}
+
+.work__highlight-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  letter-spacing: 0.03em;
+  margin-bottom: var(--space-xs);
+}
+
+.work__highlight-body {
+  color: var(--color-muted);
+  font-size: var(--text-small);
+  line-height: 1.6;
+}
+
+/* ========================================
+   CTA
+   ======================================== */
+.cta {
+  padding: var(--section-padding) 0;
+}
+
+.cta__inner {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.cta__body {
+  color: var(--color-muted);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+
+.cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  position: relative;
+  z-index: var(--z-content);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: var(--space-lg) 0 var(--space-md);
+}
+
+.footer__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  text-align: center;
+}
+
+.footer__logo {
+  height: 70px;
+  margin: 0 auto var(--space-sm);
+}
+
+.footer__tagline {
+  color: var(--color-muted);
+  font-size: var(--text-small);
+  margin-bottom: var(--space-md);
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.footer__links a {
+  font-size: var(--text-small);
+  color: var(--color-muted);
+  transition: color var(--duration-fast) ease;
+}
+
+.footer__links a:hover {
+  color: var(--color-accent);
+}
+
+.footer__contact {
+  margin-bottom: var(--space-md);
+}
+
+.footer__contact a {
+  color: var(--color-accent);
+  font-size: var(--text-small);
+}
+
+.footer__bottom p {
+  color: rgba(255,255,255,0.3);
+  font-size: var(--text-label);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+  .network__grid {
+    flex-wrap: wrap;
+  }
+
+  .network__card {
+    flex: 1 1 calc(33% - 16px);
+  }
+
+  .hero__cutout--far-left,
+  .hero__cutout--far-right,
+  .hero__cutout--edge-left,
+  .hero__cutout--edge-right {
+    display: none;
+  }
+
+  .hero__cutout--center { width: 180px; height: 240px; }
+  .hero__cutout--left-1, .hero__cutout--right-1 { width: 150px; height: 200px; }
+  .hero__cutout--left-2, .hero__cutout--right-2 { width: 130px; height: 180px; }
+}
+
+@media (max-width: 768px) {
+  /* Prevent ANY horizontal overflow on mobile */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Scale nav logo for mobile */
+  .nav__logo-img {
+    height: 60px;
+  }
+
+  .nav__links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.97);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    z-index: 99;
+  }
+
+  .nav__links--open {
+    display: flex;
+  }
+
+  .nav__link {
+    font-size: 1.25rem;
+  }
+
+  .nav__toggle {
+    display: flex;
+    z-index: 101;
+  }
+
+  .nav__toggle--active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .nav__toggle--active span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav__toggle--active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .hero {
+    min-height: auto;
+    padding-bottom: 40px;
+    align-items: center;
+  }
+
+  /* Ensure hero text never clips edges */
+  .hero__content {
+    padding: 0 24px;
+  }
+
+  .hero__title {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    word-break: break-word;
+  }
+
+  /* Mobile: replace absolute collage with a clean row of photos */
+  .hero__collage {
+    position: relative;
+    inset: auto;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 16px;
+    margin-bottom: 32px;
+    order: -1;
+    flex-wrap: wrap;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__cutout {
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50% !important;
+    object-fit: cover;
+    filter: grayscale(20%) brightness(0.85) !important;
+    z-index: 1 !important;
+    flex-shrink: 0;
+  }
+
+  /* Override the hero flex direction so photos sit above text */
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+  }
+
+  .hero__overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.9) 0%,
+      rgba(0,0,0,0.6) 40%,
+      rgba(0,0,0,0.4) 100%
+    );
+  }
+
+  /* Ensure all containers have safe mobile padding */
+  .container {
+    padding: 0 20px;
+  }
+
+  .about .container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* Section titles safe for mobile */
+  .section-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    word-break: break-word;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-it-works__line-svg {
+    display: none;
+  }
+
+  .how-it-works__steps {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .work__highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .work__header .section-title {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .proof__inner {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .proof__divider {
+    display: none;
+  }
+
+  .proof__stat {
+    flex: 0 0 40%;
+  }
+
+  .network__grid {
+    flex-wrap: wrap;
+  }
+
+  .network__card {
+    flex: 1 1 calc(50% - 16px);
+  }
+
+  .network__platforms-list {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .network__platform {
+    font-size: var(--text-h4);
+  }
+
+  /* CTA buttons stack on mobile */
+  .cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta__title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  /* Footer links wrap on mobile */
+  .footer__links {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .footer__logo {
+    height: 50px;
+  }
+
+  /* Marquee edge fades narrower on mobile */
+  .work__marquee::before,
+  .work__marquee::after {
+    width: 40px;
+  }
+
+  /* Let titles flow naturally on mobile instead of forced line breaks */
+  .section-title br,
+  .hero__title br,
+  .cta__title br {
+    display: none;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 380px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .nav__logo-img {
+    height: 48px;
+  }
+
+  .proof__number {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div id="wix-wrapper" style="position:relative;">
+
+  <!-- Background Orbs -->
+  <div class="page-bg" aria-hidden="true">
+    <div class="page-bg__orb page-bg__orb--1"></div>
+    <div class="page-bg__orb page-bg__orb--2"></div>
+    <div class="page-bg__orb page-bg__orb--3"></div>
+  </div>
+
+  <!-- Full-page animated stars/particles -->
+  <canvas class="bg-stars" id="bgStars" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/ham-logo.png" alt="High Arc Media" class="nav__logo-img">
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#how-it-works" class="nav__link">Process</a>
+        <a href="#work" class="nav__link">Work</a>
+        <a href="#contact" class="nav__link btn btn--primary">Book a Call</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero__collage" id="heroCollage" aria-hidden="true">
+      <!-- Influencer cutouts positioned via CSS -->
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/theowisseh.png" alt="" class="hero__cutout hero__cutout--center" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/naturallymelonie.png" alt="" class="hero__cutout hero__cutout--left-1" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/teesanderscomedy.png" alt="" class="hero__cutout hero__cutout--right-1" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/ayethatsmera.png" alt="" class="hero__cutout hero__cutout--left-2" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/myronjewels.png" alt="" class="hero__cutout hero__cutout--right-2" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/80ktwins.png" alt="" class="hero__cutout hero__cutout--back-left" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/kalemyname.png" alt="" class="hero__cutout hero__cutout--back-right" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/ichvse.png" alt="" class="hero__cutout hero__cutout--far-left" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/darryl.png" alt="" class="hero__cutout hero__cutout--far-right" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/lightskinkim.png" alt="" class="hero__cutout hero__cutout--back-center-left" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/geminikhai.png" alt="" class="hero__cutout hero__cutout--back-center-right" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/tylarmckenzie.png" alt="" class="hero__cutout hero__cutout--edge-left" loading="eager">
+      <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/influencers/nadia_adelay.png" alt="" class="hero__cutout hero__cutout--edge-right" loading="eager">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="section-label">High Arc Media</p>
+      <h1 class="hero__title">WE CONNECT BRANDS<br>WITH CREATORS WHO<br>MOVE CULTURE</h1>
+      <p class="hero__sub">Your brand deserves more than a post. It deserves a moment.</p>
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary btn--lg">Partner With Us</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-text">Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Social Proof Bar -->
+  <section class="proof" id="proof">
+    <div class="proof__inner">
+      <div class="proof__stat" data-animate="fade-up">
+        <span class="proof__number" data-count="40" data-suffix="M+">0</span>
+        <span class="proof__label">Cross-Platform Reach</span>
+      </div>
+      <div class="proof__divider"></div>
+      <div class="proof__stat" data-animate="fade-up" data-animate-delay="0.1">
+        <span class="proof__number" data-count="250" data-suffix="M+">0</span>
+        <span class="proof__label">Total Content Views</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__text" data-animate="fade-up">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">THE BRIDGE BETWEEN<br>BRANDS AND CULTURE</h2>
+        <p class="about__body">
+          High Arc Media's influencer marketing division is built on personal relationships. Not databases. Not cold DMs. We know these creators. We have worked with them, talked with them, and built real trust over time.
+        </p>
+        <p class="about__body">
+          And every creator we work with is connected to dozens more. That means if a brand needs a specific type of talent, we can reach them. Comedy, fashion, food, lifestyle, entertainment, whatever the niche, we either have the relationship or we are one call away from it.
+        </p>
+        <p class="about__body">
+          No middlemen. No bloated contracts. Just results.
+        </p>
+      </div>
+      <div class="about__visual" data-animate="fade-up" data-animate-delay="0.2">
+        <div class="about__glow-box">
+          <div class="about__stat-grid">
+            <p class="about__mini-headline">Built on relationships.</p>
+            <p class="about__mini-desc">Every creator in our network is someone we know personally. And their connections extend our reach across every major platform and niche.</p>
+            <div class="about__niche-tags">
+              <span class="tag">Comedy</span>
+              <span class="tag">Fashion</span>
+              <span class="tag">Food</span>
+              <span class="tag">Lifestyle</span>
+              <span class="tag">Entertainment</span>
+              <span class="tag">Beauty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Network -->
+  <section class="network section" id="network">
+    <div class="container">
+      <div class="network__header" data-animate="fade-up">
+        <p class="section-label">Our Network</p>
+        <h2 class="section-title">CREATORS ACROSS<br>EVERY NICHE THAT MATTERS</h2>
+        <p class="network__sub">We have deep relationships with creators who have built real audiences and real trust. And their networks extend our reach even further.</p>
+      </div>
+      <div class="network__grid">
+        <div class="network__card" data-animate="fade-up" data-animate-delay="0">
+          <div class="network__card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 class="network__card-title">Comedy</h3>
+          <p class="network__card-body">Skits, pranks, stand-up, game shows, character comedy. Creators with viral moments and audiences that share everything.</p>
+          <span class="network__card-stat">Deep network</span>
+        </div>
+        <div class="network__card" data-animate="fade-up" data-animate-delay="0.1">
+          <div class="network__card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 class="network__card-title">Entertainment</h3>
+          <p class="network__card-body">Actors, TV personalities, reality stars, dancers. Creators with screen credits on Netflix, Starz, Peacock, and BET.</p>
+          <span class="network__card-stat">Deep network</span>
+        </div>
+        <div class="network__card" data-animate="fade-up" data-animate-delay="0.2">
+          <div class="network__card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+          <h3 class="network__card-title">Fashion</h3>
+          <p class="network__card-body">Models, stylists, Fashion Nova ambassadors. Creators who set trends and drive purchases through hauls, lookbooks, and brand partnerships.</p>
+          <span class="network__card-stat">Deep network</span>
+        </div>
+        <div class="network__card" data-animate="fade-up" data-animate-delay="0.3">
+          <div class="network__card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <h3 class="network__card-title">Beauty</h3>
+          <p class="network__card-body">Skincare, makeup, haircare, body positivity. Creators who build loyalty through tutorials, reviews, and authentic routines their audience copies.</p>
+          <span class="network__card-stat">Deep network</span>
+        </div>
+        <div class="network__card" data-animate="fade-up" data-animate-delay="0.4">
+          <div class="network__card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3 class="network__card-title">Food + Lifestyle</h3>
+          <p class="network__card-body">Vegan entrepreneurs, motherhood creators, travel influencers, wellness advocates. Audiences that trust their recommendations and buy what they use.</p>
+          <span class="network__card-stat">Deep network</span>
+        </div>
+      </div>
+      <div class="network__platforms" data-animate="fade-up">
+        <p class="network__platforms-label">Platforms we cover</p>
+        <div class="network__platforms-list">
+          <span class="network__platform">Instagram</span>
+          <span class="network__platform">TikTok</span>
+          <span class="network__platform">YouTube</span>
+          <span class="network__platform">Facebook</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="services__header" data-animate="fade-up">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">EVERYTHING FROM<br>MATCH TO METRICS</h2>
+      </div>
+      <div class="services__grid">
+        <div class="services__card" data-animate="fade-up" data-animate-delay="0">
+          <div class="services__number">01</div>
+          <h3 class="services__card-title">Creator Matching</h3>
+          <p class="services__card-body">We know every creator in our network personally. Their audience, their style, what brands they work well with. We match based on fit, not just follower count.</p>
+        </div>
+        <div class="services__card" data-animate="fade-up" data-animate-delay="0.1">
+          <div class="services__number">02</div>
+          <h3 class="services__card-title">Campaign Management</h3>
+          <p class="services__card-body">From the first email to the final deliverable. We handle outreach, negotiations, timelines, and approvals so your team can focus on the bigger picture.</p>
+        </div>
+        <div class="services__card" data-animate="fade-up" data-animate-delay="0.2">
+          <div class="services__number">03</div>
+          <h3 class="services__card-title">Content Production</h3>
+          <p class="services__card-body">Reels, TikToks, Stories, UGC. Our creators make content that performs because they know their audience better than any brief could.</p>
+        </div>
+        <div class="services__card" data-animate="fade-up" data-animate-delay="0.3">
+          <div class="services__number">04</div>
+          <h3 class="services__card-title">Analytics + Reporting</h3>
+          <p class="services__card-body">Real numbers after every campaign. Views, engagement, click-throughs, conversions. You see exactly what your investment did.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works section" id="how-it-works">
+    <div class="container">
+      <div class="how-it-works__header" data-animate="fade-up">
+        <p class="section-label">The Process</p>
+        <h2 class="section-title">THREE STEPS.<br>ZERO HEADACHES.</h2>
+      </div>
+      <div class="how-it-works__timeline" id="timeline">
+        <svg class="how-it-works__line-svg" viewBox="0 0 1000 4" preserveAspectRatio="none" aria-hidden="true">
+          <line class="how-it-works__line-bg" x1="80" y1="2" x2="920" y2="2"/>
+          <line class="how-it-works__line-path" id="timelineLine" x1="80" y1="2" x2="920" y2="2"/>
+        </svg>
+        <div class="how-it-works__steps">
+          <div class="how-it-works__step" data-animate="fade-up" data-animate-delay="0">
+            <div class="how-it-works__step-number"><span>1</span></div>
+            <h3 class="how-it-works__step-title">Tell Us Your Goals</h3>
+            <p class="how-it-works__step-body">What is your brand? Who do you want to reach? What does success look like? We start every partnership with a conversation, not a contract.</p>
+          </div>
+          <div class="how-it-works__step" data-animate="fade-up" data-animate-delay="0.15">
+            <div class="how-it-works__step-number"><span>2</span></div>
+            <h3 class="how-it-works__step-title">We Match You</h3>
+            <p class="how-it-works__step-body">We pull from our network to find creators whose audience, style, and energy match your brand. You approve the talent before anything goes live.</p>
+          </div>
+          <div class="how-it-works__step" data-animate="fade-up" data-animate-delay="0.3">
+            <div class="how-it-works__step-number"><span>3</span></div>
+            <h3 class="how-it-works__step-title">Watch It Perform</h3>
+            <p class="how-it-works__step-body">Content goes live, numbers come in, and you get a full report. If it works (it will), we run it back.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work / Social Proof -->
+  <section class="work section" id="work">
+    <div class="container">
+      <div class="work__header" data-animate="fade-up">
+        <p class="section-label">The Work</p>
+        <h2 class="section-title">BRANDS OUR<br>CREATORS HAVE<br>WORKED WITH</h2>
+        <p class="work__sub">Our network includes creators with campaign credits from these brands and more.</p>
+      </div>
+      <div class="work__marquee" aria-label="Brand logos">
+        <div class="work__marquee-track">
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/walmart.svg" alt="Walmart" class="work__logo-img">
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/netflix.svg" alt="Netflix" class="work__logo-img">
+          <span class="work__logo-text">SAVAGE X FENTY</span>
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/amazon-prime-video.svg" alt="Amazon Prime Video" class="work__logo-img">
+          <span class="work__logo-text">META</span>
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/fashion-nova.svg" alt="Fashion Nova" class="work__logo-img">
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/jetblue.svg" alt="JetBlue" class="work__logo-img">
+          <span class="work__logo-text">MONSTER ENERGY</span>
+          <span class="work__logo-text">BURGER KING</span>
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/carnival-cruise-line.svg" alt="Carnival" class="work__logo-img">
+          <span class="work__logo-text">MICHELOB ULTRA</span>
+          <span class="work__logo-text">PETA</span>
+          <span class="work__logo-text">MTV</span>
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/starz.svg" alt="Starz" class="work__logo-img">
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/iheartradio.svg" alt="iHeartRadio" class="work__logo-img">
+          <!-- Duplicate for seamless loop -->
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/walmart.svg" alt="" class="work__logo-img">
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/netflix.svg" alt="" class="work__logo-img">
+          <span class="work__logo-text">SAVAGE X FENTY</span>
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/amazon-prime-video.svg" alt="" class="work__logo-img">
+          <span class="work__logo-text">META</span>
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/fashion-nova.svg" alt="" class="work__logo-img">
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/jetblue.svg" alt="" class="work__logo-img">
+          <span class="work__logo-text">MONSTER ENERGY</span>
+          <span class="work__logo-text">BURGER KING</span>
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/carnival-cruise-line.svg" alt="" class="work__logo-img">
+          <span class="work__logo-text">MICHELOB ULTRA</span>
+          <span class="work__logo-text">PETA</span>
+          <span class="work__logo-text">MTV</span>
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/starz.svg" alt="" class="work__logo-img">
+          <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/brands/iheartradio.svg" alt="" class="work__logo-img">
+        </div>
+      </div>
+      <div class="work__highlights">
+        <div class="work__highlight" data-animate="fade-up" data-animate-delay="0">
+          <div class="work__highlight-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h4 class="work__highlight-title">NAACP Image Award Winner</h4>
+          <p class="work__highlight-body">Tee Sanders won Outstanding Digital Content Creator at the 57th NAACP Image Awards. That is the caliber of talent in our network.</p>
+        </div>
+        <div class="work__highlight" data-animate="fade-up" data-animate-delay="0.1">
+          <div class="work__highlight-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h4 class="work__highlight-title">Savage x Fenty Ambassador</h4>
+          <p class="work__highlight-body">First Little Person ambassador for Rihanna's brand. National campaigns, major press, and a cultural moment that went beyond social media.</p>
+        </div>
+        <div class="work__highlight" data-animate="fade-up" data-animate-delay="0.2">
+          <div class="work__highlight-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4 class="work__highlight-title">6M+ TikTok Following</h4>
+          <p class="work__highlight-body">Multiple creators in our network have crossed the million-follower mark on TikTok. One sits at 6M with brand partnerships from Meta and Amazon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta section" id="contact">
+    <div class="container" data-animate="fade-up">
+      <div class="cta__inner">
+        <p class="section-label">Get Started</p>
+        <h2 class="cta__title">YOUR NEXT CAMPAIGN<br>STARTS WITH A CALL</h2>
+        <p class="cta__body">Tell us about your brand, your goals, and who you want to reach. We will find the right creators and build something that actually performs.</p>
+        <div class="cta__buttons">
+          <a href="https://calendly.com/higharc" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Book a Free Call</a>
+          <a href="mailto:contact@higharcmedia.com" class="btn btn--outline btn--lg">Send Us a Brief</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="https://raw.githubusercontent.com/contact943/ham-influencer-site/main/assets/images/ham-logo.png" alt="High Arc Media" class="footer__logo">
+        <p class="footer__tagline">Influencer marketing that moves culture.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#how-it-works">Process</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer__contact">
+        <a href="mailto:contact@higharcmedia.com">contact@higharcmedia.com</a>
+      </div>
+      <div class="footer__bottom">
+        <p>(c) 2026 High Arc Media. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script>
+/* ========================================
+   BACKGROUND STARS / PARTICLES (full page)
+   ======================================== */
+(function() {
+  var canvas = document.getElementById('bgStars');
+  if (!canvas) return;
+
+  var ctx = canvas.getContext('2d');
+  var stars = [];
+  var STAR_COUNT = 120;
+  var w, h;
+
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = document.body.scrollHeight;
+  }
+
+  function init() {
+    resize();
+    stars = [];
+    for (var i = 0; i < STAR_COUNT; i++) {
+      stars.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 1.5 + 0.3,
+        dx: (Math.random() - 0.5) * 0.15,
+        dy: (Math.random() - 0.5) * 0.1,
+        opacity: Math.random() * 0.4 + 0.1,
+        pulse: Math.random() * Math.PI * 2,
+        pulseSpeed: Math.random() * 0.008 + 0.003
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+
+    for (var i = 0; i < stars.length; i++) {
+      var s = stars[i];
+
+      // Move
+      s.x += s.dx;
+      s.y += s.dy;
+      s.pulse += s.pulseSpeed;
+
+      // Wrap around
+      if (s.x < 0) s.x = w;
+      if (s.x > w) s.x = 0;
+      if (s.y < 0) s.y = h;
+      if (s.y > h) s.y = 0;
+
+      // Pulse opacity
+      var alpha = s.opacity + Math.sin(s.pulse) * 0.15;
+      if (alpha < 0.05) alpha = 0.05;
+
+      // Draw star with cyan tint
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(62, 212, 207, ' + alpha + ')';
+      ctx.fill();
+
+      // Glow for larger stars
+      if (s.r > 1) {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r * 3, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(62, 212, 207, ' + (alpha * 0.15) + ')';
+        ctx.fill();
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  init();
+  draw();
+  window.addEventListener('resize', resize);
+})();
+
+/* ========================================
+   PERF GUARD
+   ======================================== */
+(function() {
+  var html = document.documentElement;
+  var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 768;
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var gl = null;
+  try {
+    var c = document.createElement('canvas');
+    gl = c.getContext('webgl') || c.getContext('experimental-webgl');
+  } catch(e) {}
+
+  window.HAM_PERF = {
+    hasWebGL: !!gl,
+    isMobile: isMobile,
+    reduceMotion: reduceMotion,
+    highDPR: window.devicePixelRatio > 2
+  };
+
+  if (isMobile) html.classList.add('is-mobile');
+  if (reduceMotion) html.classList.add('reduce-motion');
+})();
+
+/* ========================================
+   NAV
+   ======================================== */
+(function() {
+  var nav = document.getElementById('nav');
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  var scrollThreshold = 80;
+
+  function handleScroll() {
+    if (window.scrollY > scrollThreshold) {
+      nav.classList.add('nav--scrolled');
+    } else {
+      nav.classList.remove('nav--scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
+  toggle.addEventListener('click', function() {
+    toggle.classList.toggle('nav__toggle--active');
+    links.classList.toggle('nav__links--open');
+  });
+
+  // Close mobile menu on link click
+  var navLinks = links.querySelectorAll('.nav__link');
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      toggle.classList.remove('nav__toggle--active');
+      links.classList.remove('nav__links--open');
+    });
+  });
+})();
+
+/* ========================================
+   GSAP SCROLL ANIMATIONS
+   ======================================== */
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  var reduceMotion = window.HAM_PERF && window.HAM_PERF.reduceMotion;
+  var defaultDuration = reduceMotion ? 0.01 : 0.8;
+  var defaultEase = 'power2.out';
+
+  // Fade-up animations (IntersectionObserver for Wix iframe compatibility)
+  var fadeEls = document.querySelectorAll('[data-animate="fade-up"]');
+  fadeEls.forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(40px)';
+    el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+  });
+  var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var delay = parseFloat(el.dataset.animateDelay) || 0;
+        setTimeout(function() {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, delay * 1000);
+        fadeObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px 100px 0px' });
+  fadeEls.forEach(function(el) { fadeObserver.observe(el); });
+
+  // Counter animations
+  document.querySelectorAll('.proof__number').forEach(function(el) {
+    var target = parseInt(el.dataset.count, 10);
+    var suffix = el.dataset.suffix || '';
+
+    el.textContent = '0' + suffix;
+
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 90%',
+      once: true,
+      onEnter: function() {
+        gsap.to({ val: 0 }, {
+          val: target,
+          duration: reduceMotion ? 0.01 : 2,
+          ease: 'power1.out',
+          onUpdate: function() {
+            el.textContent = Math.round(this.targets()[0].val) + suffix;
+          }
+        });
+      }
+    });
+  });
+
+  // Timeline line draw
+  var timelineLine = document.getElementById('timelineLine');
+  if (timelineLine) {
+    var lineLength = 840;
+
+    gsap.set(timelineLine, {
+      strokeDasharray: lineLength,
+      strokeDashoffset: lineLength
+    });
+
+    gsap.to(timelineLine, {
+      strokeDashoffset: 0,
+      duration: 1.5,
+      ease: 'power2.inOut',
+      scrollTrigger: {
+        trigger: '#timeline',
+        start: 'top 70%',
+        end: 'bottom 60%',
+        scrub: 1
+      }
+    });
+  }
+
+  // Hero parallax on cutouts
+  if (!window.HAM_PERF.isMobile && !reduceMotion) {
+    var cutouts = document.querySelectorAll('.hero__cutout');
+    cutouts.forEach(function(cutout, i) {
+      var speed = 50 + (i % 4) * 30;
+      gsap.to(cutout, {
+        y: -speed,
+        scrollTrigger: {
+          trigger: '.hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1
+        }
+      });
+    });
+  }
+
+  // Hero content fade in on load
+  gsap.from('.hero__content', {
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    delay: 0.3,
+    ease: 'power2.out'
+  });
+
+  gsap.from('.hero__cutout', {
+    opacity: 0,
+    scale: 0.9,
+    duration: 0.8,
+    stagger: 0.08,
+    delay: 0.1,
+    ease: 'power2.out'
+  });
+});
+
+/* ========================================
+   THREE.JS HERO PARTICLES
+   ======================================== */
+(function() {
+  if (!window.HAM_PERF || !window.HAM_PERF.hasWebGL || window.HAM_PERF.isMobile || window.HAM_PERF.reduceMotion) {
+    return;
+  }
+
+  function initParticles() {
+    if (typeof THREE === 'undefined') return;
+
+    var canvas = document.getElementById('heroCanvas');
+    if (!canvas) return;
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(60, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
+    camera.position.z = 30;
+
+    var renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      alpha: true,
+      antialias: false,
+      powerPreference: 'low-power'
+    });
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    var PARTICLE_COUNT = 300;
+    var FIELD_SIZE = 50;
+    var DRIFT_SPEED = 0.0003;
+
+    var geometry = new THREE.BufferGeometry();
+    var positions = new Float32Array(PARTICLE_COUNT * 3);
+    var opacities = new Float32Array(PARTICLE_COUNT);
+    var velocities = new Float32Array(PARTICLE_COUNT * 3);
+
+    var halfField = FIELD_SIZE / 2;
+
+    for (var i = 0; i < PARTICLE_COUNT; i++) {
+      var i3 = i * 3;
+      positions[i3] = (Math.random() - 0.5) * FIELD_SIZE;
+      positions[i3 + 1] = (Math.random() - 0.5) * FIELD_SIZE;
+      positions[i3 + 2] = (Math.random() - 0.5) * 20;
+      opacities[i] = Math.random() * 0.5 + 0.1;
+      velocities[i3 + 1] = Math.random() * 0.5 + 0.3;
+    }
+
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute('alpha', new THREE.BufferAttribute(opacities, 1));
+
+    var material = new THREE.ShaderMaterial({
+      transparent: true,
+      depthWrite: false,
+      uniforms: {
+        uColor: { value: new THREE.Color(0x3ED4CF) },
+        uSize: { value: 2.5 * renderer.getPixelRatio() }
+      },
+      vertexShader: [
+        'attribute float alpha;',
+        'varying float vAlpha;',
+        'uniform float uSize;',
+        'void main() {',
+        '  vAlpha = alpha;',
+        '  vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);',
+        '  gl_PointSize = uSize * (20.0 / -mvPosition.z);',
+        '  gl_Position = projectionMatrix * mvPosition;',
+        '}'
+      ].join('\n'),
+      fragmentShader: [
+        'uniform vec3 uColor;',
+        'varying float vAlpha;',
+        'void main() {',
+        '  float dist = length(gl_PointCoord - vec2(0.5));',
+        '  if (dist > 0.5) discard;',
+        '  float fade = 1.0 - smoothstep(0.2, 0.5, dist);',
+        '  gl_FragColor = vec4(uColor, vAlpha * fade * 0.6);',
+        '}'
+      ].join('\n')
+    });
+
+    var points = new THREE.Points(geometry, material);
+    scene.add(points);
+
+    var animationId = null;
+
+    function animate() {
+      animationId = requestAnimationFrame(animate);
+
+      var posArray = geometry.attributes.position.array;
+
+      for (var i = 0; i < PARTICLE_COUNT; i++) {
+        var i3 = i * 3;
+        posArray[i3 + 1] += velocities[i3 + 1] * DRIFT_SPEED * 60;
+        if (posArray[i3 + 1] > halfField) posArray[i3 + 1] = -halfField;
+      }
+
+      geometry.attributes.position.needsUpdate = true;
+      points.rotation.y += 0.0002;
+      points.rotation.x += 0.0001;
+
+      renderer.render(scene, camera);
+    }
+
+    // Intersection Observer - pause when off-screen
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          if (!animationId) animate();
+        } else {
+          if (animationId) {
+            cancelAnimationFrame(animationId);
+            animationId = null;
+          }
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(document.querySelector('.hero'));
+
+    // Resize handler
+    window.addEventListener('resize', function() {
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    });
+  }
+
+  // Wait for Three.js to load
+  if (typeof THREE !== 'undefined') {
+    initParticles();
+  } else {
+    window.addEventListener('load', initParticles);
+  }
+})();
+
+</script>
+
+
+<script>
+(function() {
+  function sendHeight() {
+    var h = Math.max(document.body.scrollHeight, document.body.offsetHeight,
+      document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+    try {
+      window.parent.postMessage(h, '*');
+      window.parent.postMessage(JSON.stringify({src:window.location.href,type:'setHeight',height:h}), '*');
+    } catch(e) {}
+  }
+  window.addEventListener('load', function() {
+    sendHeight();
+    setTimeout(sendHeight, 500);
+    setTimeout(sendHeight, 2000);
+    setTimeout(sendHeight, 5000);
+  });
+  window.addEventListener('resize', sendHeight);
+  if (typeof ResizeObserver !== 'undefined') new ResizeObserver(sendHeight).observe(document.body);
+})();
+</script>
+</body>
+</html>
