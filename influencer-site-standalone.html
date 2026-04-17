@@ -1273,9 +1273,14 @@ body {
     z-index: 1 !important;
   }
 
-  /* Hide all cutouts after the 9th one */
+  /* Show only first 9 cutouts (3x3 grid) */
   .hero__cutout:nth-child(n+10) {
     display: none !important;
+  }
+
+  /* Also hide any that overflow the 3x3 grid area */
+  .hero__collage {
+    max-height: 245px;
   }
 
   .hero__overlay {
