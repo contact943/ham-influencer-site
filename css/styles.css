@@ -855,17 +855,19 @@ body {
   width: max-content;
 }
 
-.work__logo {
-  font-family: var(--font-heading);
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-  color: rgba(255,255,255,0.25);
-  letter-spacing: 0.08em;
+.work__logo-img {
+  height: 40px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
   flex-shrink: 0;
-  transition: color 0.3s ease;
+  filter: brightness(0) invert(1);
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
 }
 
-.work__logo:hover {
-  color: rgba(255,255,255,0.5);
+.work__logo-img:hover {
+  opacity: 0.7;
 }
 
 @keyframes marqueeScroll {
