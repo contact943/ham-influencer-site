@@ -1113,18 +1113,17 @@ body {
     word-break: break-word;
   }
 
-  /* Mobile: circle grid behind the hero text */
+  /* Mobile: 3x3-ish circle grid behind the hero text */
   .hero__collage {
     position: absolute;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    gap: 10px;
     justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    max-width: 360px;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -55%);
-    padding: 0 16px;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    padding: 0;
   }
 
   .hero__cutout {

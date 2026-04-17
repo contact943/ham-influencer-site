@@ -1247,18 +1247,17 @@ body {
     word-break: break-word;
   }
 
-  /* Mobile: circle grid behind the hero text */
+  /* Mobile: 3x3-ish circle grid behind the hero text */
   .hero__collage {
     position: absolute;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    gap: 10px;
     justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    max-width: 360px;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -55%);
-    padding: 0 16px;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    padding: 0;
   }
 
   .hero__cutout {
@@ -1924,10 +1923,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (entry.isIntersecting) {
         var el = entry.target;
         var delay = parseFloat(el.dataset.animateDelay) || 0;
-        setTimeout(function() {
-          el.style.opacity = '1';
-          el.style.transform = 'translateY(0)';
-        }, delay * 1000);
+        setTimeout(function() { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, delay * 1000);
         fadeObserver.unobserve(el);
       }
     });
@@ -2156,19 +2152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
-(function() {
-  function sendHeight() {
-    var h = Math.max(document.body.scrollHeight, document.body.offsetHeight,
-      document.documentElement.scrollHeight, document.documentElement.offsetHeight);
-    try {
-      window.parent.postMessage(h, '*');
-      window.parent.postMessage(JSON.stringify({src:window.location.href,type:'setHeight',height:h}), '*');
-    } catch(e) {}
-  }
-  window.addEventListener('load', function() { sendHeight(); setTimeout(sendHeight,500); setTimeout(sendHeight,2000); setTimeout(sendHeight,5000); });
-  window.addEventListener('resize', sendHeight);
-  if (typeof ResizeObserver !== 'undefined') new ResizeObserver(sendHeight).observe(document.body);
-})();
+(function(){function s(){var h=Math.max(document.body.scrollHeight,document.body.offsetHeight,document.documentElement.scrollHeight,document.documentElement.offsetHeight);try{window.parent.postMessage(h,'*');window.parent.postMessage(JSON.stringify({src:window.location.href,type:'setHeight',height:h}),'*');}catch(e){}}window.addEventListener('load',function(){s();setTimeout(s,500);setTimeout(s,2000);setTimeout(s,5000);});window.addEventListener('resize',s);if(typeof ResizeObserver!=='undefined')new ResizeObserver(s).observe(document.body);})();
 </script>
 </body>
 </html>
