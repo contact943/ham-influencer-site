@@ -1128,9 +1128,6 @@ body {
     overflow: visible;
   }
 
-  .hero {
-    overflow: visible;
-  }
 
   .hero__cutout {
     position: relative !important;
@@ -1149,9 +1146,10 @@ body {
     display: none !important;
   }
 
-  /* Also hide any that overflow the 3x3 grid area */
+  /* Clip collage so nothing leaks below the 3x3 grid */
   .hero__collage {
     max-height: 245px;
+    overflow: hidden;
   }
 
   .hero__overlay {
