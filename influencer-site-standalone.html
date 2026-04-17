@@ -1247,7 +1247,7 @@ body {
     position: absolute;
     display: grid;
     grid-template-columns: repeat(3, 75px);
-    grid-template-rows: repeat(3, 75px);
+    grid-template-rows: repeat(2, 75px);
     gap: 10px;
     justify-content: center;
     left: 50%;
@@ -1270,15 +1270,9 @@ body {
     z-index: 1 !important;
   }
 
-  /* Show only first 9 cutouts (3x3 grid) */
-  .hero__cutout:nth-child(n+10) {
+  /* Show only first 6 cutouts (2 rows of 3) */
+  .hero__cutout:nth-child(n+7) {
     display: none !important;
-  }
-
-  /* Clip collage so nothing leaks below the 3x3 grid */
-  .hero__collage {
-    max-height: 245px;
-    overflow: hidden;
   }
 
   .hero__overlay {
